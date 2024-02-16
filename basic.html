@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Hey, It's Ziaurrehman 
+    <div id="root">
+
+    </div>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+<!-- react element  -->
+<!-- /*
+   react works on json object key value pair like 
+   {
+    type: button,
+    props:/*herre we can write different properties of elelement */
+    children: submit 
+    className: btn-btuntype
+   }
+*/ -->
+<!-- creation of react elelements -->
+
+<script>
+    const Btn=()=>React.createElement("button",{id:'btn'},React.createElement("span",{},"submit"));
+    // its similar in this manner 
+    // <button id="btn"><span>submit</span></button>
+    // now we have to make the root element 
+    const rootContainer=document.getElementById('root');
+    // now we can rendeer the function inside root elelement 
+    const root=ReactDOM.createRoot(rootContainer);
+    root.render(Btn());
+</script>
+
+
+
+</body>
+</html>
